@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<p id="aa">adsfadsfasdf</p>
+		<button type="button" id="button">复制</button>
+		<script type="text/javascript">
+			let aa = document.getElementById("aa")
+			let btn = document.getElementById("button")
+            console.log(aa.innerHTML);
+			btn.onclick = function() {
+				copyToClipboard(aa.innerHTML)
+				// alert("复制成功")
+			}
+			const copyToClipboard = (text) =>
+        console.log(navigator.clipboard);
+				navigator.clipboard?.writeText && navigator.clipboard.writeText(text)
+		</script>
+	</body>
+</html>

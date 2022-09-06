@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>菜鸟教程(runoob.com)</title>
+  <style>
+    #ex1 {
+      color: red;
+    }
+
+    #a1 {
+      color: #000;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>setProperty() 方法</h1>
+
+  <p>点击按钮设置一个新的 CSS 属性。</p>
+
+  <button onclick="myFunction()">点我</button>
+
+  <div id="ex1">一些文本。</div>
+  <div class="a1">测试文本</div>
+  <div class="a1">测试文本</div>
+  <div class="a1">测试文本</div>
+  <div class="a1">测试文本</div>
+  <div class="a1">测试文本</div>
+  <div class="a1">测试文本</div>
+  <div class="a1">测试文本</div>
+
+  <script>
+    function myFunction() {
+      // document.styleSheets[0].cssRules // 所有样式数组
+      var declaration = document.styleSheets[0].cssRules[0].style;
+      console.log(document.styleSheets);
+      var a1s = document.getElementsByClassName('a1');
+      for (let index = 0; index < a1s.length; index++) {
+        // const element = array[index];
+        a1s[index].style.setProperty('font-size','30px')
+
+        
+      }
+      // console.log(a1)
+      // a1.style.setProperty('font-size','30px')
+      var setprop = declaration.setProperty("background-color", "yellow");
+    }
+  </script>
+
+</body>
+
+</html>
